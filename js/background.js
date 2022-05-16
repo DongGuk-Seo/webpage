@@ -1,4 +1,4 @@
-const images =[
+const images = [
     "0.jpg",
     "1.jpg",
     "2.jpg",
@@ -12,8 +12,7 @@ const images =[
 ];
 
 const randomimage = images[Math.floor(Math.random() * images.length)];
-// const image = document.createElement("img");
-// image.src = `img/${randomimage}`;
-
-const back = document.querySelector(".container")
-back.style.background = `img/${randomimage}`
+const image = document.createElement("img");
+image.src = `img/${randomimage}`;
+image.classList.add('bgimg');
+document.body.appendChild(image);
