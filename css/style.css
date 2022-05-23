@@ -24,6 +24,7 @@ body {
 
 .bgimg {
     position: absolute;
+    background-color: rgba(0, 0, 0, -5);
     top: 0px;
     bottom: 0px;
     left: 0;
@@ -52,6 +53,7 @@ body {
 
 .blanks ::placeholder {
     text-align: center;
+    color: white;
 }
 
 .upper {
@@ -84,6 +86,10 @@ body {
     font-size: 1000%;
 }
 
+.loginForm {
+    margin-bottom: 10px;
+}
+
 #todo {
     margin-top: 5px;
     position: relative;
@@ -91,4 +97,57 @@ body {
 
 #todo-list {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#todo-list li {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+#todo-list button {
+    width: 30px;
+    border: none;
+    border-radius: 30%;
+}
+
+#todo-list button:hover {
+    color: red;
+}
+
+#enterButton,
+#addButton {
+    border: none;
+    background: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+#enterButton:hover,
+#addButton:hover {
+    color: white;
+    border-bottom: 2px solid ghostwhite;
+    animation: fadeIn 0.5s linear;
+}
+
+#nameblank,
+#todoblank {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#nameblank:focus,
+#todoblank:focus {
+    border: none;
+    border-bottom: 2px solid ghostwhite;
+    animation: fadeIn 0.4s linear;
 }
