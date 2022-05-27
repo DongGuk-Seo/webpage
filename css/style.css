@@ -50,16 +50,26 @@ body {
     height: 200px;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .blanks ::placeholder {
     text-align: center;
-    color: white;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+.clock span {
+    text-shadow: 50px;
+    offset: 20px;
+    color: antiquewhite;
 }
 
 #greeting {
     font-size: 500%;
     color: ghostwhite;
+    bottom: 400px;
+    margin-bottom: 20px;
 }
 
 .upper {
@@ -116,12 +126,13 @@ body {
 
 #todo-list li {
     display: flex;
-    width: 80%;
+    width: 250px;
     margin-top: 15px;
     font-size: 20px;
     font-weight: 800;
     color: white;
     justify-content: space-between;
+    align-items: center;
 }
 
 #todo-list button {
@@ -138,9 +149,10 @@ body {
 
 #enterButton,
 #addButton {
-    border: rgba(0, 0, 0, 0.1) solid 2px;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 15px;
     border-left: none;
-    border-right: none;
+    border-top: none;
     background: none;
     border-radius: 25%;
     height: 60px;
@@ -152,7 +164,7 @@ body {
 #enterButton:hover,
 #addButton:hover {
     color: white;
-    border-top: 2px solid ghostwhite;
+    border-right: 2px solid ghostwhite;
     border-bottom: 2px solid ghostwhite;
     animation: fadeIn 0.5s linear;
 }
@@ -161,13 +173,33 @@ body {
 #todoblank {
     height: 60px;
     border: none;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 20px;
+    color: white;
 }
 
 #nameblank:focus,
 #todoblank:focus {
     border: none;
-    border-bottom: 2px solid ghostwhite;
-    animation: fadeIn 0.4s linear;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    outline: 0;
+    animation: fadeIn 0.8s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
+input:focus:-moz-placeholder {
+    opacity: 0;
 }
